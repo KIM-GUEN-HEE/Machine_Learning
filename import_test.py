@@ -22,10 +22,7 @@ y = data['Is_Malicious']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) 
 # train_test_split : scikit-learn 라이브러리에서 훈련세트와 테스트 세트로 무작위로 분할하는 데 사용
 
-# 데이터 스케일링
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+
 
 # 머신러닝 모델 선택 (Random Forest Classifier)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
